@@ -21,7 +21,7 @@ order:
   - [current_position, Current Position]
   - [education, Education]
   - [positions, Previous Positions]
-  # - [honors, Honors \& Awards]
+  - [honors, Honors \& Awards]
   - [all_publications, Publications]
   - [repos, Open Source Repositories]
   # - [talks, Invited Talks]
@@ -36,21 +36,30 @@ about: |
   <b>Autonomous University of Madrid</b>
   and study foundational topics in <b>machine learning</b> and
   <b>function space inference</b>.
-  My research focuses on function space inference, more precisely on studying
-  implicit processes and methods of approximating the intractable distributions
+  My research focuses on studying implicit processes and methods of approximating the intractable distributions
   they define.
   </p><br>
 
 current_position:
   - place: Autonomous University
     location: Madrid
-    title: PhD Student
+    title: Research Personnel, Ph.D. Student granted with FPI-UAM Scholarship
     dates: 2021 -- Present
+    details:
+      - "Thesis: \\textit{New Learning Methods based on Implicit Processes}"
+      - "Advisor: \\href{https://dhnzl.org}{Daniel Hernández Lobato}"
 
 education:
-  - school: Autonomous University
+  - school: Autonomous University of Madrid
     location: Madrid, Spain
-    degree: MsC in Data Science
+    degree: Ph.D. Student
+    dates: 2021 -- Present
+    details:
+      - "Thesis: \\textit{New Learning Methods based on Implicit Processes}"
+      - "Advisor: \\href{https://dhnzl.org}{Daniel Hernández Lobato}"
+  - school: Autonomous University of Madrid
+    location: Madrid, Spain
+    degree: M.S. in Data Science
     dates: 2020 -- 2022
   - school: University of Granada
     location: Granada, Spain
@@ -66,16 +75,30 @@ positions:
     title: Research Assistant
     dates: 2021 -- 2021
 
+honors:
+  - place: Autonomous University
+    location: Madrid, Spain
+    title: Research Collaboration Scholarship with the Department of Computer Science
+    year: 2020
+  - place: Autonomous University
+    location: Madrid, Spain
+    title: Granted FPI-UAM Scholarship. Competitive Predoctoral Contract for Training Research Personnel
+    year: 2021
+
+
+
 all_publications:
-  name: "Amos"
+  name: "Ortega"
   file: all.bib
   sort_bib: True
   include_image: True
   group_by_year: True
   author_urls:
     'Andrés R. Masegosa': 'https://andresmasegosa.github.io/'
-    Aaron Lou': 'https://www.aaronlou.com/'
-
+    'Rafael Cabañas': 'https://www.linkedin.com/in/rcabanasdepaz'
+    'Daniel Hernández-Lobato': 'https://dhnzl.org'
+    'Simón Rodríguez Santana': 'https://www.linkedin.com/in/sim%C3%B3n-rodr%C3%ADguez-santana-697743124/'
+    'Bryan Zaldívar}': 'https://www.linkedin.com/in/bryan-zaldivar/'
 repos:
   - repo_url: https://github.com/PGM-Lab/2022-AISTATS-diversity
     year: 2022
