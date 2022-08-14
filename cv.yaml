@@ -78,13 +78,18 @@ positions:
 honors:
   - place: Autonomous University
     location: Madrid, Spain
-    title: Research Collaboration Scholarship with the Department of Computer Science
-    year: 2020
-  - place: Autonomous University
-    location: Madrid, Spain
     title: Granted FPI-UAM Scholarship. Competitive Predoctoral Contract for Training Research Personnel
     year: 2021
-
+    descr: Department of Computer Science, Autonomous University of Madrid
+  - place: Autonomous University
+    location: Madrid, Spain
+    title: Research Collaboration Scholarship
+    year: 2020
+    descr: Department of Computer Science, Autonomous University of Madrid
+  - place: University of Granada, Spain
+    title: Granted Highest Mark on Bachelor's Thesis, 10/10. Statistical Models with Variational Methods
+    year: 2020
+    descr: Department of Computer Science and Faculty of Science, Granada
 
 
 all_publications:
@@ -98,8 +103,12 @@ all_publications:
     'Rafael Cabañas': 'https://www.linkedin.com/in/rcabanasdepaz'
     'Daniel Hernández-Lobato': 'https://dhnzl.org'
     'Simón Rodríguez Santana': 'https://www.linkedin.com/in/sim%C3%B3n-rodr%C3%ADguez-santana-697743124/'
-    'Bryan Zaldívar}': 'https://www.linkedin.com/in/bryan-zaldivar/'
+    'Bryan Zaldívar': 'https://www.linkedin.com/in/bryan-zaldivar/'
+
 repos:
-  - repo_url: https://github.com/PGM-Lab/2022-AISTATS-diversity
-    year: 2022
-    desc: Diversity and Generalization on Neural Network Ensembles
+  - repo_url: https://github.com/Ludvins/Statistical-Models-with-Variational-Methods
+    year: 2020
+    desc: Bachelor's Thesis, Statistical Models with Variational Methods.
+  - repo_url: https://github.com/libreim/apuntesDGIIM
+    year: 2017
+    desc: Divulgation Group Destinated to the Double Degree in Computer Science and Mathematics, Granada

@@ -9,7 +9,7 @@
   series = 	 {Proceedings of Machine Learning Research},
   month = 	 {28--30 Mar},
   publisher =    {PMLR},
-  selected={true},
+  selected={false},
   _venue={AISTATS},
   pdf = 	 {https://proceedings.mlr.press/v151/ortega22a/ortega22a.pdf},
   url = 	 {https://proceedings.mlr.press/v151/ortega22a.html},
@@ -29,4 +29,18 @@
   year={2022},
   _venue={Beyond Bayes Workshop, ICML},
   abstract={ Model selection in machine learning (ML) is a crucial part of the Bayesian learning procedure. Model choice may impose strong biases on the resulting predictions, which can hinder the performance of methods such as Bayesian neural networks and neural samplers. On the other hand, newly proposed approaches for Bayesian ML exploit features of approximate inference in function space with implicit stochastic processes (a generalization of Gaussian processes). The approach of Sparse Implicit Processes (SIP) is particularly successful in this regard, since it is fully trainable and achieves flexible predictions. Here, we expand on the original experiments to show that SIP is capable of correcting model bias when the data generating mechanism differs strongly from the one implied by the model. We use synthetic datasets to show that SIP is capable of providing predictive distributions that reflect the data better than the exact predictions of the initial, but wrongly assumed model.}
+}
+
+@article{ortega2022deep,
+  doi = {10.48550/ARXIV.2206.06720},
+  booktitle = {Under Review},
+  url = {https://arxiv.org/abs/2206.06720},
+  pdf = {https://arxiv.org/abs/2206.06720.pdf},
+  selected = {false},
+  _venue={Under Review},
+  author = {Ortega, Luis A. and Santana,  Sim{\'o}n Rodr{\'\i}guez  and Hernández-Lobato, Daniel},
+  title = {Deep Variational Implicit Processes},
+  publisher = {arXiv},
+  year = {2022},
+  abstract = {mplicit processes (IPs) are a generalization of Gaussian processes (GPs). IPs may lack a closed-form expression but are easy to sample from. Examples include, among others, Bayesian neural networks or neural samplers. IPs can be used as priors over functions, resulting in flexible models with well-calibrated prediction uncertainty estimates. Methods based on IPs usually carry out function-space approximate inference, which overcomes some of the difficulties of parameter-space approximate inference. Nevertheless, the approximations employed often limit the expressiveness of the final model, resulting, e.g., in a Gaussian predictive distribution, which can be restrictive. We propose here a multi-layer generalization of IPs called the Deep Variational Implicit process (DVIP). This generalization is similar to that of deep GPs over GPs, but it is more flexible due to the use of IPs as the prior distribution over the latent functions. We describe a scalable variational inference algorithm for training DVIP and show that it outperforms previous IP-based methods and also deep GPs. We support these claims via extensive regression and classification experiments. We also evaluate DVIP on large datasets with up to several million data instances to illustrate its good scalability and performance. }
 }
