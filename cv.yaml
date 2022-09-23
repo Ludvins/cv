@@ -14,7 +14,7 @@ social:
 # LaTeX formatting
 style: banking # casual, classic, oldstyle, or banking
 color: blue # blue, orange, green, red, purple, grey and black
-color2: '0.25,0.25,0.25' # Make the font under the name a darker grey.
+color2: "0.25,0.25,0.25" # Make the font under the name a darker grey.
 
 order:
   - [about, NONE]
@@ -74,6 +74,7 @@ positions:
   - place: University of Almería
     title: Research Assistant
     dates: 2021 -- 2021
+    inline_detail: "with \\href{Andrés R. Masegosa}{https://andresmasegosa.github.io/} studing the effect of diversity on Deep Neural Network ensembles."
 
 honors:
   - place: Autonomous University
@@ -91,7 +92,6 @@ honors:
     year: 2020
     descr: Department of Computer Science and Faculty of Science, Granada
 
-
 all_publications:
   name: "Ortega"
   file: all.bib
@@ -99,11 +99,11 @@ all_publications:
   include_image: True
   group_by_year: True
   author_urls:
-    'Andrés R. Masegosa': 'https://andresmasegosa.github.io/'
-    'Rafael Cabañas': 'https://www.linkedin.com/in/rcabanasdepaz'
-    'Daniel Hernández-Lobato': 'https://dhnzl.org'
-    'Simón Rodríguez Santana': 'https://www.linkedin.com/in/sim%C3%B3n-rodr%C3%ADguez-santana-697743124/'
-    'Bryan Zaldívar': 'https://www.linkedin.com/in/bryan-zaldivar/'
+    "Andrés R. Masegosa": "https://andresmasegosa.github.io/"
+    "Rafael Cabañas": "https://www.linkedin.com/in/rcabanasdepaz"
+    "Daniel Hernández-Lobato": "https://dhnzl.org"
+    "Simón Rodríguez Santana": "https://www.linkedin.com/in/sim%C3%B3n-rodr%C3%ADguez-santana-697743124/"
+    "Bryan Zaldívar": "https://www.linkedin.com/in/bryan-zaldivar/"
 
 repos:
   - repo_url: https://github.com/Ludvins/Statistical-Models-with-Variational-Methods
