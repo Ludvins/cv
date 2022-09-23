@@ -74,7 +74,7 @@ positions:
   - place: University of Almería
     title: Research Assistant
     dates: 2021 -- 2021
-    inline_detail: "with \\href{Andrés R. Masegosa}{https://andresmasegosa.github.io/} studing the effect of diversity on Deep Neural Network ensembles."
+    inline_detail: "with \\href{https://andresmasegosa.github.io/}{Andrés R. Masegosa} studing the effect of diversity on Deep Neural Network ensembles."
 
 honors:
   - place: Autonomous University
