@@ -3,7 +3,7 @@
 ~< block body >~
 % \begin{itemize}
 ~< for award in items >~
-  << award.title >> \hfill << award['year'] >>
+  << award.title >> \hfill {\small \color{teal} << award['year'] >>}
   ~< if award.descr >~
     \\ {\scriptsize \color{gray}{<< award.descr >>} \par}
   ~< else >~

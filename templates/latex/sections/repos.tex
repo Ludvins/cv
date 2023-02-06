@@ -3,7 +3,7 @@
 ~< block body >~
   ~< for item in items >~
     \href{<< item.repo_url >>}{<< item.name >>} | $\bigstar$<< item.stars >> \hfill
-    << item.year>>
-    \\ {\scriptsize \color{gray} \emph{<< item.desc >>} }\par \vspace*{0.2cm}
+    {\small \color{teal} << item.year>>} \\[0.1mm]
+    {\scriptsize \color{gray} \emph{<< item.desc >>} }\par \vspace*{0.2cm}
   ~< endfor >~
 ~< endblock body >~

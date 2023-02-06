@@ -7,7 +7,7 @@
 \moderncvstyle{<< style >>}
 \moderncvcolor{<< color >>}
 \definecolor{color2}{rgb}{<<color2>>}
-
+\usepackage{xcolor}
 \usepackage[top=1in, bottom=1in, left=.7in, right=.7in]{geometry}
 
 % Define filled heart symbol
@@ -25,16 +25,17 @@
 \homepage{<< url >>}
 \social[linkedin]{<<social.linkedin>>}
 \social[github]{<<social.github>>}
-\extrainfo{\small Last updated on \today}
 
 \AtBeginDocument{\hypersetup{colorlinks}}
 \frenchspacing
 
 \begin{document}
 \hypersetup{allcolors=color1}
-\makecvtitle
 \vspace{-1cm}
+\makecvtitle
 
+\thispagestyle{empty}
+\vspace{-1cm}
 << body >>
 
 \end{document}

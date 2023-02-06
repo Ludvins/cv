@@ -263,9 +263,11 @@ def get_pub_latex(context, config):
         if len(authors) > 1:
             authors[-1] = "and " + authors[-1]
         sep = ", " if len(authors) > 2 else " "
-        authors = sep.join(authors)
-
-        return authors
+        _authors = sep.join(authors[:-1])
+        _authors = _authors + " " + authors[-1]
+        print(_authors)
+        input()
+        return _authors
 
     # [First Initial]. [Last Name]
     def _format_author_list(immut_author_list):
@@ -322,9 +324,9 @@ def get_pub_latex(context, config):
         return rf"""
             \begin{{minipage}}{{\textwidth}}
             \begin{{tabular}}[t]{{p{{8mm}}p{{1mm}}>{{\raggedright\arraybackslash}}p{{6.5in}}}}
-            {highlight_color} \hfill{prefix}{gidx}.\hspace*{{1mm}} && \textbf{{{title}}} \footnotesize \color{{gray}}{links} \\
-            {highlight_color} && {author_str} \\
-            {highlight_color} && {year_venue} {note_str} \\
+            {highlight_color} \hfill{prefix}{gidx}.\hspace*{{1mm}} && \textbf{{{title}}} \footnotesize \color{{teal}}{links} \\
+            {highlight_color} && \small {author_str} \\
+            {highlight_color} && \small {year_venue} {note_str} \\
             \end{{tabular}} \\[2mm]
             \end{{minipage}}"""
 
