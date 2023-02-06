@@ -8,7 +8,6 @@ url: "ludvins.github.io"
 social:
   github: ludvins
   linkedin: ludvins
-  twitter: LAOrtega\_
   google_scholar: 1Ly8qeoAAAAJ
 
 # LaTeX formatting
@@ -29,6 +28,20 @@ order:
   # - [service, Professional Activities]
   # - [teaching, Teaching]
   # - [skills, Skills]
+
+tex_order:
+  - [positions_tex, Experience]
+  - [all_publications, Publications]
+  - [education, Education]
+  - [honors, Honors \& Awards]
+  - [repos, Open Source Repositories]
+  # - [talks, Invited Talks]
+  # - [advising, Interns and Students]
+  # - [service, Professional Activities]
+  # - [teaching, Teaching]
+  # - [skills, Skills]
+
+
 
 about: |
   <p align='justify'>
@@ -76,6 +89,18 @@ positions:
     dates: 2021 -- 2021
     inline_detail: "with \\href{https://andresmasegosa.github.io/}{Andrés R. Masegosa} studing the effect of diversity on Deep Neural Network ensembles."
 
+positions_tex:
+  - place: Autonomous University of Madrid
+    title: Research Personnel
+    dates: 12/2021 -- Now
+    inline_detail: "Ph.D. Student granted with FPI-UAM Scholarship with  \\href{https://dhnzl.org}{Daniel Hernández Lobato}."
+  - place: University of Almería
+    title: Research Assistant
+    dates: 02/2021 -- 12/2021
+    inline_detail: "Worked with \\href{https://andresmasegosa.github.io/}{Andrés R. Masegosa} studing the effect of diversity on Deep Neural Network ensembles."
+
+
+
 honors:
   - place: Autonomous University
     location: Madrid, Spain
@@ -98,11 +123,11 @@ all_publications:
   sort_bib: True
   include_image: True
   group_by_year: True
+  group_by_year_latex: False
   author_urls:
     "Andrés R. Masegosa": "https://andresmasegosa.github.io/"
     "Rafael Cabañas": "https://www.linkedin.com/in/rcabanasdepaz"
     "Daniel Hernández-Lobato": "https://dhnzl.org"
-    "Simón Rodríguez Santana": "https://www.linkedin.com/in/sim%C3%B3n-rodr%C3%ADguez-santana-697743124/"
     "Bryan Zaldívar": "https://www.linkedin.com/in/bryan-zaldivar/"
 
 repos:

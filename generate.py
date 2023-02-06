@@ -307,10 +307,8 @@ def get_pub_latex(context, config):
         year_venue = "{} {}".format(pub["_venue"], pub["year"])
 
         links = []
-        for base in ["code", "slides", "talk"]:
-            key = base + "url"
-            if key in pub:
-                links.append(r"[\href{{{}}}{{{}}}] ".format(pub[key], base))
+        links.append(r"[\href{{{}}}{{{}}}] ".format(pub["link"], "Link"))
+        links.append(r"[\href{{{}}}{{{}}}] ".format(pub["codeurl"], "Code"))
         links = " ".join(links)
 
         highlight = "selected" in pub and pub["selected"].lower() == "true"
@@ -322,13 +320,13 @@ def get_pub_latex(context, config):
             note_str = ""
 
         return rf"""
-\begin{{minipage}}{{\textwidth}}
-\begin{{tabular}}[t]{{p{{8mm}}p{{1mm}}>{{\raggedright\arraybackslash}}p{{6.5in}}}}
-{highlight_color} \hfill{prefix}{gidx}.\hspace*{{1mm}} && \textit{{{title}}} {links} \\
-{highlight_color} && {author_str} \\
-{highlight_color} && {year_venue} {note_str} \\
-\end{{tabular}} \\[2mm]
-\end{{minipage}}"""
+            \begin{{minipage}}{{\textwidth}}
+            \begin{{tabular}}[t]{{p{{8mm}}p{{1mm}}>{{\raggedright\arraybackslash}}p{{6.5in}}}}
+            {highlight_color} \hfill{prefix}{gidx}.\hspace*{{1mm}} && \textbf{{{title}}} \footnotesize \color{{gray}}{links} \\
+            {highlight_color} && {author_str} \\
+            {highlight_color} && {year_venue} {note_str} \\
+            \end{{tabular}} \\[2mm]
+            \end{{minipage}}"""
 
     def load_and_replace(bibtex_file):
         with open(os.path.join("publications", bibtex_file), "r") as f:
@@ -341,7 +339,7 @@ def get_pub_latex(context, config):
         return p
 
     sort_bib = config["sort_bib"]
-    group_by_year = config["group_by_year"]
+    group_by_year = config["group_by_year_latex"]
 
     contents = {}
     pubs = load_and_replace(config["file"])
@@ -371,7 +369,21 @@ def get_pub_latex(context, config):
                 gidx += 1
 
     else:
-        assert False
+        for pub in pubs:
+            m = re.search("(\d{4})", pub["year"])
+            assert m is not None
+            pub["year_int"] = int(m.group(1))
+
+        details = ""
+        gidx = 1
+        for year, year_pubs in groupby(pubs, lambda pub: pub["year_int"]):
+            for i, pub in enumerate(year_pubs):
+                details += _get_pub_str(pub, "", gidx) + sep
+                gidx += 1
+
+
+
+
     contents["details"] = details
     contents["file"] = config["file"]
 
@@ -479,7 +491,12 @@ class RenderContext(object):
         yaml_data = self.make_replacements(yaml_data)
 
         body = ""
-        for section_tag, section_title in yaml_data["order"]:
+
+        if self._file_ending == ".tex":
+            order = yaml_data["tex_order"]
+        else:
+            order = yaml_data["order"]
+        for section_tag, section_title in order:
             print("Processing section: {}".format(section_tag))
 
             section_data = {"name": section_title}
@@ -513,6 +530,7 @@ class RenderContext(object):
                 "coursework",
                 "education",
                 "honors",
+                    "positions_tex",
                 "positions",
                 "research",
                 "skills",
