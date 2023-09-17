@@ -15,7 +15,7 @@ This repo contains the source for my CV:
 
 
 # Building and running
-Dependencies are included in `requirements.txt` and can be installed
+Dependencies for Python 3.6 are included in `requirements.txt` and can be installed
 using `pip` with `pip3 install -r requirements.txt`.
 `make` will call [generate.py](generate.py) and
 build the LaTeX documents with `latexmk` and `biber`.

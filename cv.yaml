@@ -90,6 +90,10 @@ positions:
     inline_detail: "with \\href{https://andresmasegosa.github.io/}{Andrés R. Masegosa} studing the effect of diversity on Deep Neural Network ensembles."
 
 positions_tex:
+  - place: University of Cambridge
+    title: Visitor Researcher
+    dates: 09/2023 -- Present
+    inline_detail: "Ongoing research on Uncertainty Estimation on Large Language Models with \\href{https://jmhl.org/}{José Miguel Hernández Lobato}."
   - place: Autonomous University of Madrid
     title: Research Personnel
     dates: 12/2021 -- Present

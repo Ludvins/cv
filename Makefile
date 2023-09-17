@@ -3,14 +3,14 @@
 # Brandon Amos <http://bamos.github.io> and
 # Ellis Michael <http://ellismichael.com>
 
-WEBSITE_DIR=$(HOME)/Ludvins.github.io
+WEBSITE_DIR=$(HOME)/ludvins.github.io
 WEBSITE_PDF=$(WEBSITE_DIR)/data/cv.pdf
 WEBSITE_MD=$(WEBSITE_DIR)/_includes/cv.md
 WEBSITE_DATE=$(WEBSITE_DIR)/_includes/last-updated.txt
 
 TEMPLATES=$(shell find templates -type f)
 
-BUILD_DIR=build
+BUILD_DIR=./build
 TEX=$(BUILD_DIR)/cv.tex
 PDF=$(BUILD_DIR)/cv.pdf
 MD=$(BUILD_DIR)/cv.md
@@ -42,7 +42,7 @@ $(PDF): $(TEX)
 	latexmk -c -cd $(BUILD_DIR)/cv
 
 viewpdf: $(PDF)
-	gnome-open $(PDF)
+	evince $(PDF)
 
 stage: $(PDF) $(MD)
 	cp $(PDF) $(WEBSITE_PDF)

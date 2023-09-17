@@ -265,8 +265,6 @@ def get_pub_latex(context, config):
         sep = ", " if len(authors) > 2 else " "
         _authors = sep.join(authors[:-1])
         _authors = _authors + " " + authors[-1]
-        print(_authors)
-        input()
         return _authors
 
     # [First Initial]. [Last Name]
@@ -306,7 +304,7 @@ def get_pub_latex(context, config):
             title = r"\href{{{}}}{{{}}} ".format(pub["link"], title)
 
         assert "_venue" in pub and "year" in pub
-        year_venue = "{} {}".format(pub["_venue"], pub["year"])
+        year_venue = "{}, {}".format(pub["_venue"], pub["year"])
 
         links = []
         links.append(r"[\href{{{}}}{{{}}}] ".format(pub["link"], "Link"))
@@ -526,13 +524,19 @@ class RenderContext(object):
                 #     continue
                 section_data["items"] = section_content
                 section_template_name = os.path.join(
+                    self.SECTIONS_DIR, "current_position" + self._file_ending
+                )
+            elif section_tag in ["positions_tex"]:
+                # if self._context_name == "markdown":
+                #     continue
+                section_data["items"] = section_content
+                section_template_name = os.path.join(
                     self.SECTIONS_DIR, "positions" + self._file_ending
                 )
             elif section_tag in [
                 "coursework",
                 "education",
                 "honors",
-                    "positions_tex",
                 "positions",
                 "research",
                 "skills",
