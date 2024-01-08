@@ -90,7 +90,7 @@ def get_pub_md(context, config):
         year_venue = "{} {}".format(pub["_venue"], pub["year"])
 
         highlight = "selected" in pub and pub["selected"].lower() == "true"
-        img_str = f'<img src="images/publications/{pub["ID"]}.png" onerror="this.style.display=\'none\'" class="publicationImg" width="300"/>'
+        img_str = f'<img src="images/publications/{pub["ID"]}.png" onerror="this.style.display=\'none\'" class="publicationImg"/>'
         links = []
         abstract = ""
         if "abstract" in pub:
@@ -119,6 +119,7 @@ def get_pub_md(context, config):
         if abstract:
             abstract = """
 <div id="abs_{}{}" style="text-align: justify; display: none" markdown="1">
+<br> 
 {}
 </div>
 """.format(
