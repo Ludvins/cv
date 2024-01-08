@@ -90,7 +90,7 @@ def get_pub_md(context, config):
         year_venue = "{} {}".format(pub["_venue"], pub["year"])
 
         highlight = "selected" in pub and pub["selected"].lower() == "true"
-        img_str = f'<img src="images/publications/{pub["ID"]}.png" onerror="this.style.display=\'none\'" class="publicationImg" />'
+        img_str = f'<img src="images/publications/{pub["ID"]}.png" onerror="this.style.display=\'none\'" class="publicationImg" width="300"/>'
         links = []
         abstract = ""
         if "abstract" in pub:
@@ -307,7 +307,7 @@ def get_pub_latex(context, config):
         year_venue = "{}, {}".format(pub["_venue"], pub["year"])
 
         links = []
-        links.append(r"[\href{{{}}}{{{}}}] ".format(pub["link"], "Link"))
+        links.append(r"[\href{{{}}}{{{}}}] ".format(pub["link"], "PDF"))
         links.append(r"[\href{{{}}}{{{}}}] ".format(pub["codeurl"], "Code"))
         links = " ".join(links)
 
@@ -544,6 +544,7 @@ class RenderContext(object):
                 "teaching",
                 "talks",
                 "advising",
+                "ongoing_research"
             ]:
                 section_data["items"] = section_content
                 section_template_name = os.path.join(

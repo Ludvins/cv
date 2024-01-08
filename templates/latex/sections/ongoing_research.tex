@@ -1,0 +1,16 @@
+~< extends "section.tex" >~
+
+~< block body >~
+%\begin{enumerate}
+~< for award in items >~
+  << award.title >> 
+  ~< if award.link >~{\small \color{teal} \href{<<award['link']>>}{[Draft]}} ~< endif >~
+  ~< if award.descr >~
+    \\ {\scriptsize \color{gray}{<< award.descr >>} \par}\vspace*{0.1cm}
+  ~< else >~
+    \\[0.5mm]
+  ~< endif >~
+~< endfor >~
+%\end{enumerate}
+\vspace*{-0.3cm}
+~< endblock body >~

@@ -22,7 +22,8 @@ order:
   - [positions, Previous Positions]
   - [honors, Honors \& Awards]
   - [all_publications, Publications]
-  - [repos, Open Source Repositories]
+  - [ongoing_research, Ongoing Research]
+  # - [repos, Open Source Repositories]
   # - [talks, Invited Talks]
   # - [advising, Interns and Students]
   # - [service, Professional Activities]
@@ -32,9 +33,10 @@ order:
 tex_order:
   - [positions_tex, Experience]
   - [all_publications, Publications]
+  - [ongoing_research, Ongoing Research]
   - [education, Education]
   - [honors, Honors \& Awards]
-  - [repos, Open Source Repositories]
+  # - [repos, Open Source Repositories]
   # - [talks, Invited Talks]
   # - [advising, Interns and Students]
   # - [service, Professional Activities]
@@ -47,10 +49,9 @@ about: |
   <p align='justify'>
   I am a PhD Student at the
   <b>Autonomous University of Madrid</b>
-  and study foundational topics in <b>machine learning</b> and
-  <b>function space inference</b>.
-  My research focuses on studying implicit processes and methods of approximating the intractable distributions
-  they define.
+  and study foundational topics in <b>probabilistic machine learning</b> and
+  <b>variational inference</b>.
+  My research focuses on studying the application of variational inference to modern Bayesian deep learning.
   </p><br>
 
 current_position:
@@ -66,10 +67,10 @@ education:
   - school: Autonomous University of Madrid
     location: Madrid, Spain
     degree: Ph.D. Student
-    dates: 2021 -- Present
+    dates: 11/2021 -- 11/2025
     details:
       - "Thesis: \\textit{New Learning Methods based on Implicit Processes}"
-      - "Advisor: \\href{https://dhnzl.org}{Daniel Hernández Lobato}"
+      # - "Internship availability: Starting June 2024"
   - school: Autonomous University of Madrid
     location: Madrid, Spain
     degree: M.S. in Data Science
@@ -103,9 +104,27 @@ positions_tex:
     dates: 02/2021 -- 12/2021
     inline_detail: "Worked with \\href{https://andresmasegosa.github.io/}{Andrés R. Masegosa} studing the effect of diversity on Deep Neural Network ensembles."
 
+ongoing_research:
+  - title: Variational Linearized Laplace Approximation for Bayesian Deep Learning
+    descr: "Uncertainty estimation on pre-trained Deep Learning models using Variational Inference and LLA."
+    link: https://arxiv.org/abs/2302.12565
+  - title: Understanding Generalization in the Interpolation Regime using the Rate Function
+    descr: "Explaining deep learning techniques (weight-decay, SGD, overparameterization, data-augmentation) using Large Deviation Theory"
+    link: https://arxiv.org/abs/2306.10947
+  - title: If there is no underfitting, there is no Cold Posterior Effect
+    descr: "Misspecification leads to Cold Posterior Effect (CPE) only when the resulting Bayesian posterior underfits."
+    link: https://arxiv.org/abs/2310.01189
+  - title: PAC-Bayes-Chernoff bounds for unbounded losses
+    descr: PAC-Bayes version of the Chernoff bound which solves the open problem of optimizing the free parameter on many PAC-Bayes bounds.
+    link: https://arxiv.org/abs/2401.01148
 
 
 honors:
+  - place: University of Cambridge
+    location: Cambridge, United Kingdom
+    title: Granted Santander-UAM Scholarship. Uncertainty estimation in LLM at Cambridge University.
+    year: 09/2023 - 12/2023
+    descr: Computational and Biological Learning Lab, University of Cambridge
   - place: Autonomous University
     location: Madrid, Spain
     title: Granted FPI-UAM Scholarship. Competitive Predoctoral Contract for Training Research Personnel

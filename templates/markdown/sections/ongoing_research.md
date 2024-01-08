@@ -5,9 +5,12 @@
 {% for award in items %}
 <tr>
   <td>
-  <div style='float: right'>{{ award.year }}</div>
+  <!-- <div style='float: right'>{{ award.year }}</div> -->
   <div>
     {{ award.title }}
+    {% if award.link %}
+        [<a href="{{ award.link }}">{{ "pre-print" }}</a>]
+    {% endif %}
     {% if award.descr %}
     <br><p style="color:grey;font-size:1.4rem">{{ award.descr }}</p>
     {% endif %}
