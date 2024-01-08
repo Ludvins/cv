@@ -7,3 +7,8 @@ __pycache__
 *.shelf.*
 venv
 auto
+.venv/*
+scholar_stats.shelf
+repo_htmls.shelf
+pdflatex39033.fls
+pdflatex39300.fls
