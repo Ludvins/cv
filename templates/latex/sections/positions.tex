@@ -10,9 +10,10 @@
     ~<- if item.location ->~
     , << item.location >>
     ~< endif >~
+    \hfill {\small \color{teal} << item.dates >>} \par
     ~< if item.inline_detail >~
-    {\footnotesize \color{gray} (<< item.inline_detail >>)}
+    {\footnotesize \color{gray} << item.inline_detail >>}
     ~< endif >~
-    \hfill << item.dates >> \par
+    \par
 ~< endfor >~
 ~< endblock body >~

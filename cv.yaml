@@ -69,12 +69,14 @@ education:
     degree: Ph.D. Student
     dates: 11/2021 -- 11/2025
     details:
-      - "Thesis: \\textit{New Learning Methods based on Implicit Processes}"
+      - "Thesis: \\textit{Variational Inference for Bayesian Deep Learning}"
       # - "Internship availability: Starting June 2024"
   - school: Autonomous University of Madrid
     location: Madrid, Spain
     degree: M.S. in Data Science
     dates: 2020 -- 2022
+    details:
+      - "Master Thesis: \\textit{Deep Variational Implicit Processes}"
   - school: University of Granada
     location: Granada, Spain
     degree: B.S. in Computer Science
@@ -82,39 +84,40 @@ education:
   - school: University of Granada
     location: Granada, Spain
     degree: B.S. in Mathematics
-    dates: 2015 -- 2020
+    dates: 2015 -- 2020 
+    details:
+      - "Bachelor Thesis: \\textit{Statistical Models with Variational Methods}"
+ 
 
 positions:
+  - place: University of Cambridge
+    title: Visitor Researcher
+    dates: 09/2023 -- 12/2023
+    inline_detail: "Research on Uncertainty Estimation on Large Language Models with \\href{https://jmhl.org/}{José Miguel Hernández Lobato}."
   - place: University of Almería
     title: Research Assistant
     dates: 2021 -- 2021
-    inline_detail: "with \\href{https://andresmasegosa.github.io/}{Andrés R. Masegosa} studing the effect of diversity on Deep Neural Network ensembles."
+    inline_detail: "Research on the effect of diversity on Deep Neural Network ensembles with \\href{https://andresmasegosa.github.io/}{Andrés R. Masegosa}."
 
 positions_tex:
-  - place: University of Cambridge
-    title: Visitor Researcher
-    dates: 09/2023 -- Present
-    inline_detail: "Ongoing research on Uncertainty Estimation on Large Language Models with \\href{https://jmhl.org/}{José Miguel Hernández Lobato}."
   - place: Autonomous University of Madrid
-    title: Research Personnel
+    title: Teaching Assistant and Research Personnel
     dates: 12/2021 -- Present
     inline_detail: "Ph.D. Student granted with FPI-UAM Scholarship with  \\href{https://dhnzl.org}{Daniel Hernández Lobato}."
+  - place: University of Cambridge
+    title: Visitor Researcher
+    dates: 09/2023 -- 12/2023
+    inline_detail: "Research on Uncertainty Estimation on Large Language Models with \\href{https://jmhl.org/}{José Miguel Hernández Lobato}."
   - place: University of Almería
     title: Research Assistant
     dates: 02/2021 -- 12/2021
     inline_detail: "Worked with \\href{https://andresmasegosa.github.io/}{Andrés R. Masegosa} studing the effect of diversity on Deep Neural Network ensembles."
 
 ongoing_research:
-  - title: Variational Linearized Laplace Approximation for Bayesian Deep Learning
-    descr: "Uncertainty estimation on pre-trained Deep Learning models using Variational Inference and LLA."
-    link: https://arxiv.org/abs/2302.12565
-  - title: Understanding Generalization in the Interpolation Regime using the Rate Function
-    descr: "Explaining deep learning techniques (weight-decay, SGD, overparameterization, data-augmentation) using Large Deviation Theory"
+  - title: "PAC-Chernoff Bounds: Understanding Generalization in the Interpolation Regime (under review)"
+    descr: "Explaining deep learning techniques (weight-decay, overparameterization, data-augmentation) using Large Deviation Theory."
     link: https://arxiv.org/abs/2306.10947
-  - title: If there is no underfitting, there is no Cold Posterior Effect
-    descr: "Misspecification leads to Cold Posterior Effect (CPE) only when the resulting Bayesian posterior underfits."
-    link: https://arxiv.org/abs/2310.01189
-  - title: PAC-Bayes-Chernoff bounds for unbounded losses
+  - title: PAC-Bayes-Chernoff Bounds for Unbounded Losses (under review)
     descr: PAC-Bayes version of the Chernoff bound which solves the open problem of optimizing the free parameter on many PAC-Bayes bounds.
     link: https://arxiv.org/abs/2401.01148
 
@@ -122,8 +125,8 @@ ongoing_research:
 honors:
   - place: University of Cambridge
     location: Cambridge, United Kingdom
-    title: Granted Santander-UAM Scholarship. Uncertainty estimation in LLM at Cambridge University.
-    year: 09/2023 - 12/2023
+    title: Granted Santander-UAM Scholarship. Uncertainty Estimation in LLM at Cambridge University.
+    year: 2023
     descr: Computational and Biological Learning Lab, University of Cambridge
   - place: Autonomous University
     location: Madrid, Spain
@@ -138,7 +141,7 @@ honors:
   - place: University of Granada, Spain
     title: Granted Highest Mark on Bachelor's Thesis, 10/10. Statistical Models with Variational Methods
     year: 2020
-    descr: Department of Computer Science and Faculty of Science, Granada
+    descr: Department of Computer Science and Faculty of Science, University of Granada
 
 all_publications:
   name: "Ortega"

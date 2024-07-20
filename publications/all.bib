@@ -1,5 +1,5 @@
 @inproceedings{pmlr-v151-ortega22a,
-  title     = { Diversity and Generalization in Neural Network Ensembles },
+  title     = {Diversity and Generalization in Neural Network Ensembles },
   author    = {Ortega, Luis A. and Cabañas, Rafael and Masegosa, Andrés R.},
   booktitle = {Proceedings of The 25th International Conference on Artificial Intelligence and Statistics},
   pages     = {11720--11743},
@@ -17,21 +17,6 @@
   abstract  = { Ensembles are widely used in machine learning and, usually, provide state-of-the-art performance in many prediction tasks. From the very beginning, the diversity of an ensemble has been identified as a key factor for the superior performance of these models. But the exact role that diversity plays in ensemble models is poorly understood, specially in the context of neural networks. In this work, we combine and expand previously published results in a theoretically sound framework that describes the relationship between diversity and ensemble performance for a wide range of ensemble methods. More precisely, we provide sound answers to the following questions: how to measure diversity, how diversity relates to the generalization error of an ensemble, and how diversity is promoted by neural network ensemble algorithms. This analysis covers three widely used loss functions, namely, the squared loss, the cross-entropy loss, and the 0-1 loss; and two widely used model combination strategies, namely, model averaging and weighted majority vote. We empirically validate this theoretical analysis with neural network ensembles. }
 }
 
-@article{santana2022correcting,
-  title     = {Correcting Model Bias with Sparse Implicit Processes},
-  author    = {Rodríguez-Santana, Simón and Ortega, Luis A. and Hernández-Lobato, Daniel and Zaldívar, Bryan},
-  booktitle = {ICML 2022 Workshop "Beyond Bayes: Paths Towards Universal Reasoning Systems"},
-  journal   = {arXiv preprint arXiv:2207.10673},
-  url       = {https://arxiv.org/abs/2207.10673},
-  pdf       = {https://arxiv.org/pdf/2207.10673.pdf},
-  codeurl   = {https://github.com/simonrsantana/sparse-implicit-processes},
-  selected  = {false},
-  year      = {2022},
-  _venue    = {ICML Workshop "Beyond Bayes: Paths Towards Universal Reasoning Systems"},
-  abstract  = { Model selection in machine learning (ML) is a crucial part of the Bayesian learning procedure. Model choice may impose strong biases on the resulting predictions, which can hinder the performance of methods such as Bayesian neural networks and neural samplers. On the other hand, newly proposed approaches for Bayesian ML exploit features of approximate inference in function space with implicit stochastic processes (a generalization of Gaussian processes). The approach of Sparse Implicit Processes (SIP) is particularly successful in this regard, since it is fully trainable and achieves flexible predictions. Here, we expand on the original experiments to show that SIP is capable of correcting model bias when the data generating mechanism differs strongly from the one implied by the model. We use synthetic datasets to show that SIP is capable of providing predictive distributions that reflect the data better than the exact predictions of the initial, but wrongly assumed model.}
-}
-
-
 @inproceedings{ortega2023deep,
   title={Deep Variational Implicit Processes},
   author    = {Ortega, Luis A. and Rodríguez-Santana,  Simón and Hernández-Lobato, Daniel},
@@ -43,4 +28,31 @@
   abstract  = {Implicit processes (IPs) are a generalization of Gaussian processes (GPs). IPs may lack a closed-form expression but are easy to sample from. Examples include, among others, Bayesian neural networks or neural samplers. IPs can be used as priors over functions, resulting in flexible models with well-calibrated prediction uncertainty estimates. Methods based on IPs usually carry out function-space approximate inference, which overcomes some of the difficulties of parameter-space approximate inference. Nevertheless, the approximations employed often limit the expressiveness of the final model, resulting, e.g., in a Gaussian predictive distribution, which can be restrictive. We propose here a multi-layer generalization of IPs called the Deep Variational Implicit process (DVIP). This generalization is similar to that of deep GPs over GPs, but it is more flexible due to the use of IPs as the prior distribution over the latent functions. We describe a scalable variational inference algorithm for training DVIP and show that it outperforms previous IP-based methods and also deep GPs. We support these claims via extensive regression and classification experiments. We also evaluate DVIP on large datasets with up to several million data instances to illustrate its good scalability and performance. }
   selected  = {false},
   _venue = {International Conference on Learning Representations (ICLR)},
+}
+
+@article{ortega2024variational,
+  title={Variational Linearized Laplace Approximation for Bayesian Deep Learning},
+  author    = {Ortega, Luis A. and Rodríguez-Santana,  Simón and Hernández-Lobato, Daniel},
+  booktitle={International Conference on Machine Learning},
+  url={https://proceedings.mlr.press/v235/ortega24a.html},
+  codeurl={https://github.com/Ludvins/Variational-LLA},
+  pdf={https://proceedings.mlr.press/v235/ortega24a.html},
+  abstract={ The Linearized Laplace Approximation (LLA) has been recently used to perform uncertainty estimation on the predictions of pre-trained deep neural networks (DNNs). However, its widespread application is hindered by significant computational costs, particularly in scenarios with a large number of training points or DNN parameters. Consequently, additional approximations of LLA, such as Kronecker-factored or diagonal approximate GGN matrices, are utilized, potentially compromising the model's performance. To address these challenges, we propose a new method for approximating LLA using a variational sparse Gaussian Process (GP). Our method is based on the dual RKHS formulation of GPs and retains, as the predictive mean, the output of the original DNN. Furthermore, it allows for efficient stochastic optimization, which results in sub-linear training time in the size of the training dataset. Specifically, its training cost is independent of the number of training points. We compare our proposed method against accelerated LLA (ELLA), which relies on the Nyström approximation, as well as other LLA variants employing the sample-then-optimize principle. Experimental results, both on regression and classification datasets, show that our method outperforms these already existing efficient variants of LLA, both in terms of the quality of the predictive distribution and in terms of total computational time. },
+  year={2024},
+  selected  = {false},
+  _venue = {International Conference on Machine Learning (ICML)},
+}
+
+
+@article{zhang2024cold,
+  title={The Cold Posterior Effect Indicates Underfitting, and Cold Posteriors Represent a Fully Bayesian Method to Mitigate It},
+  author    = {Zhang, Yijie and Wu, Yi-Shan and Ortega, Luis A. and Masegosa, Andrés R.},
+  booktitle={Transactions for Machine Learning Research},
+  url={https://openreview.net/forum?id=GZORXGxHHT},
+  codeurl={https://github.com/pyijiezhang/cpe-underfit},
+  pdf={https://openreview.net/pdf?id=GZORXGxHHT},
+  abstract={The cold posterior effect (CPE) (Wenzel et al., 2020) in Bayesian deep learning shows that, for posteriors with a temperature T<1, the resulting posterior predictive could have better performance than the Bayesian posterior (T=1). As the Bayesian posterior is known to be optimal under perfect model specification, many recent works have studied the presence of CPE as a model misspecification problem, arising from the prior and/or from the likelihood. In this work, we provide a more nuanced understanding of the CPE as we show that misspecification leads to CPE only when the resulting Bayesian posterior underfits. In fact, we theoretically show that if there is no underfitting, there is no CPE. Furthermore, we show that these tempered posteriors with (T<1) are indeed proper Bayesian posteriors with a different combination of likelihood and prior parameterized by $T$. This observation validates the adjustment of the temperature hyperparameter T as a straightforward approach to mitigate underfitting in the Bayesian posterior. In essence, we show that by fine-tuning the temperature T we implicitly utilize alternative Bayesian posteriors, albeit with less misspecified likelihood and prior distributions. },
+  year={2024},
+  selected  = {false},
+  _venue = {Transactions for Machine Learning Research (TMLR)},
 }
