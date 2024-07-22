@@ -346,6 +346,10 @@ def get_pub_latex(context, config):
     pubs = load_and_replace(config["file"])
     sep = "\n"
 
+    for pub in pubs:
+        if pub["only_web"] == "true":
+            pubs.remove(pub)
+
     if sort_bib:
         pubs = sorted(pubs, key=lambda pub: int(pub["year"]), reverse=True)
 
