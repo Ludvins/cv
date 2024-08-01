@@ -1,7 +1,7 @@
 ~< extends "section.tex" >~
 
 ~< block body >~
-% \vspace{-2mm}
+ \vspace{-2mm}
 % \begin{itemize}
 ~< for school in items >~
     % \item 
@@ -14,10 +14,11 @@
   ~< endif >~
   ~< if school.details >~
     ~< for detail in school.details ->~
+        \vspace{-0.5mm}
         {\footnotesize \color{gray} <<detail>>} \par
     ~< endfor >~
   ~< endif >~
-  \vspace{1mm}
+  \vspace{0.1mm}
 ~< endfor >~
 % \end{itemize}
 \vspace{-3mm}

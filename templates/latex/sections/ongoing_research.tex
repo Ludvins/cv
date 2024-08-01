@@ -4,7 +4,7 @@
 %\begin{enumerate}
 ~< for award in items >~
   << award.title >> 
-  ~< if award.link >~{\small \color{teal} \href{<<award['link']>>}{[Draft]}} ~< endif >~
+  ~< if award.link >~\hfill {\small \color{teal} \href{<<award['link']>>}{[Draft]}} ~< endif >~
   ~< if award.descr >~
     \\ {\scriptsize \color{gray}{<< award.descr >>} \par}\vspace*{0.1cm}
   ~< else >~
@@ -13,5 +13,5 @@
   \vspace{1mm}
 ~< endfor >~
 %\end{enumerate}
-\vspace*{-0.3cm}
+\vspace*{-0.5cm}
 ~< endblock body >~

@@ -1,9 +1,11 @@
 ~< extends "section.tex" >~
 
 ~< block body >~
+  \vspace{-0.2mm}
   ~< for item in items >~
     \href{<< item.repo_url >>}{<< item.name >>} | $\bigstar$<< item.stars >> \hfill
-    {\small \color{teal} << item.year>>} \\[0.1mm]
-    {\scriptsize \color{gray} \emph{<< item.desc >>} }\par \vspace*{0.2cm}
+    {\small \color{teal} << item.year>>\par }
+    {\vspace*{-1mm} \scriptsize \color{gray} \emph{<< item.desc >>} }\par \vspace{1mm}
   ~< endfor >~
+\vspace{-4mm}
 ~< endblock body >~

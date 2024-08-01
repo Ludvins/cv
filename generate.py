@@ -115,7 +115,7 @@ def get_pub_md(context, config):
                     "[<a href='{}' target='_blank'>{}</a>] ".format(pub[key], base)
                 )
         links = " ".join(links)
-
+    
         if abstract:
             abstract = """
 <div id="abs_{}{}" style="text-align: justify; display: none" markdown="1">
@@ -305,7 +305,6 @@ def get_pub_latex(context, config):
             title = r"\href{{{}}}{{{}}} ".format(pub["link"], title)
 
         assert "_venue" in pub and "year" in pub
-        year_venue = "{}, {}".format(pub["_venue"], pub["year"])
 
         links = []
         links.append(r"[\href{{{}}}{{{}}}] ".format(pub["link"], "PDF"))
@@ -319,15 +318,22 @@ def get_pub_latex(context, config):
             note_str = f"({pub['_note']})"
         else:
             note_str = ""
-
+        
         return rf"""
+            {highlight_color}\textbf{{{title}}} \hfill {pub["_venue_short"]} {pub["year"]}\\
+            {highlight_color}{{\small {author_str}}} \hfill {{\footnotesize {{\color{{teal}}{links}}}}}\hspace{{-1mm}}\vspace{{1.5mm}}"""
+
+        return_str = rf"""
             \begin{{minipage}}{{\textwidth}}
-            \begin{{tabular}}[t]{{p{{8mm}}p{{1mm}}>{{\raggedright\arraybackslash}}p{{6.5in}}}}
-            {highlight_color} \hfill{prefix}{gidx}.\hspace*{{1mm}} && \textbf{{{title}}} \footnotesize \color{{teal}}{links} \\
-            {highlight_color} && \small {author_str} \\
-            {highlight_color} && \small {year_venue} {note_str} \\
-            \end{{tabular}} \\[2mm]
+            \begin{{tabular}}[t]{{p{{1mm}}p{{1mm}}>{{\raggedright\arraybackslash}}p{{6.5in}}}}
+            {highlight_color} \circle.\hspace*{{1mm}} && \textbf{{{title}}} \hfill {pub["_venue_short"]} { pub["year"]} \\
+            {highlight_color} && \small {author_str} \footnotesize \color{{teal}}{links}\\"""
+
+
+        
+        return_str += rf"""\end{{tabular}} \\[1mm]
             \end{{minipage}}"""
+        return return_str
 
     def load_and_replace(bibtex_file):
         with open(os.path.join("publications", bibtex_file), "r") as f:
