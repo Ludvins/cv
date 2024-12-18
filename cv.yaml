@@ -118,8 +118,9 @@ ongoing_research:
   - title: "PAC-Chernoff Bounds: Understanding Generalization in the Interpolation Regime (under review)"
     descr: "Explaining deep learning techniques (weight-decay, overparameterization, data-augmentation) using Large Deviation Theory."
     link: https://arxiv.org/abs/2306.10947
-  - title: Fixed-Mean Gaussian Processes for ad-hoc Bayesian Deep Learning
+  - title: Fixed-Mean Gaussian Processes for ad-hoc Bayesian Deep Learning (under review)
     descr: Converting models to Bayesian by creating a Gaussian Process with fixed predictive mean to that model.
+    link: https://arxiv.org/abs/2412.04177
 
 
 honors:
@@ -158,6 +159,8 @@ all_publications:
     "Yijie Zhang": "https://sites.google.com/view/yijiezhang/home"
     "Yi-Shan Wu": "https://sites.google.com/view/yishanwu/home"
     "Simón Rodríguez-Santana": "https://www.iit.comillas.edu/personas/srsantana"
+    "Ioar Casado": "https://www.bcamath.org/es/node/11954"
+    "Aritz Pérez": "https://www.bcamath.org/es/node/10660"
 
 repos:
   - repo_url: https://github.com/AlexImmer/Laplace

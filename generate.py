@@ -308,7 +308,8 @@ def get_pub_latex(context, config):
 
         links = []
         links.append(r"[\href{{{}}}{{{}}}] ".format(pub["link"], "PDF"))
-        links.append(r"[\href{{{}}}{{{}}}] ".format(pub["codeurl"], "Code"))
+        if "codeurl" in pub:
+            links.append(r"[\href{{{}}}{{{}}}] ".format(pub["codeurl"], "Code"))
         links = " ".join(links)
 
         highlight = "selected" in pub and pub["selected"].lower() == "true"
