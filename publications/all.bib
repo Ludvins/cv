@@ -95,3 +95,18 @@
   _venue    = {ICML Workshop "Beyond Bayes: Paths Towards Universal Reasoning Systems"},
   abstract  = { Model selection in machine learning (ML) is a crucial part of the Bayesian learning procedure. Model choice may impose strong biases on the resulting predictions, which can hinder the performance of methods such as Bayesian neural networks and neural samplers. On the other hand, newly proposed approaches for Bayesian ML exploit features of approximate inference in function space with implicit stochastic processes (a generalization of Gaussian processes). The approach of Sparse Implicit Processes (SIP) is particularly successful in this regard, since it is fully trainable and achieves flexible predictions. Here, we expand on the original experiments to show that SIP is capable of correcting model bias when the data generating mechanism differs strongly from the one implied by the model. We use synthetic datasets to show that SIP is capable of providing predictive distributions that reflect the data better than the exact predictions of the initial, but wrongly assumed model.}
 }
+
+@article{masegosa2024pacchernoff,
+      title={PAC-Chernoff Bounds: Understanding Generalization in the Interpolation Regime}, 
+      author={Andrés R. Masegosa and Luis A. Ortega},
+      booktitle = {Journal of Artificial Intelligence Research},
+      url       = {https://www.jair.org/index.php/jair/article/view/17036},
+      pdf       = {https://www.jair.org/index.php/jair/article/view/17036/27129},
+      codeurl   = {https://github.com/Ludvins/2024_PAC-Chernoff-Bound},
+      selected  = {false},
+      only_web  = {false},
+      year      = {2025},
+      _venue    = {Journal of Artificial Intelligence Research (JAIR)},
+      _venue_short = {JAIR},
+      abstract  = {This paper introduces a distribution-dependent PAC-Chernoff bound that exhibits perfect tightness for interpolators, even within over-parameterized model classes. This bound, which relies on basic principles of Large Deviation Theory, defines a natural measure of the smoothness of a model, characterized by simple real-valued functions. Building upon this bound and the new concept of smoothness, we present an unified theoretical framework revealing why certain interpolators show an exceptional generalization, while others falter. We theoretically show how a wide spectrum of modern learning methodologies, encompassing techniques such as l2-norm, distance-from-initialization and input-gradient regularization, in combination with data augmentation, invariant architectures, and over-parameterization, collectively guide the optimizer toward smoother interpolators, which, according to our theoretical framework, are the ones exhibiting superior generalization performance. This study shows that distribution-dependent bounds serve as a powerful tool to understand the complex dynamics behind the generalization capabilities of over-parameterized interpolators.}
+}

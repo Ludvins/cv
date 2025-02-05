@@ -115,9 +115,6 @@ positions_tex:
     inline_detail: "Worked with \\href{https://andresmasegosa.github.io/}{Andrés R. Masegosa} studing the effect of diversity on Deep Neural Network ensembles."
 
 ongoing_research:
-  - title: "PAC-Chernoff Bounds: Understanding Generalization in the Interpolation Regime (under review)"
-    descr: "Explaining deep learning techniques (weight-decay, overparameterization, data-augmentation) using Large Deviation Theory."
-    link: https://arxiv.org/abs/2306.10947
   - title: Fixed-Mean Gaussian Processes for ad-hoc Bayesian Deep Learning (under review)
     descr: Converting models to Bayesian by creating a Gaussian Process with fixed predictive mean to that model.
     link: https://arxiv.org/abs/2412.04177
