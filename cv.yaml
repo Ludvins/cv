@@ -49,8 +49,8 @@ about: |
   <p align='justify'>
   I am a PhD Student at the
   <b>Autonomous University of Madrid</b>
-  and study foundational topics in <b>probabilistic machine learning</b> and
-  <b>variational inference</b>.
+  and study foundational topics in <b>Probabilistic Machine Learning</b> and
+  <b>Variational Inference</b>.
   My research focuses on Function-Space Variational Inference, Linearized Laplace Approximation, Deep Ensembles, and Chernoff-Based Generalization Bounds.
   </p><br>
 
@@ -69,7 +69,7 @@ education:
     degree: Ph.D. Student
     dates: 11/2021 -- 11/2025
     details:
-      - "Thesis: \\textit{Uncertainty Estimation and GeneralizationBounds for Modern Deep Learning}"
+      - "Thesis: \\textit{Uncertainty Estimation and Generalization Bounds for Modern Deep Learning}"
   - school: National Distance Education University
     location: Spain
     degree: B.S. in Physics
