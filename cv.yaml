@@ -51,7 +51,7 @@ about: |
   <b>Autonomous University of Madrid</b>
   and study foundational topics in <b>probabilistic machine learning</b> and
   <b>variational inference</b>.
-  My research focuses on studying the application of variational inference to modern Bayesian deep learning.
+  My research focuses on Function-Space Variational Inference, Linearized Laplace Approximation, Deep Ensembles, and Chernoff-Based Generalization Bounds.
   </p><br>
 
 current_position:
@@ -69,8 +69,11 @@ education:
     degree: Ph.D. Student
     dates: 11/2021 -- 11/2025
     details:
-      - "Thesis: \\textit{Variational Inference for Bayesian Deep Learning}"
-      # - "Internship availability: Starting June 2024"
+      - "Thesis: \\textit{Uncertainty Estimation and GeneralizationBounds for Modern Deep Learning}"
+  - school: National Distance Education University
+    location: Spain
+    degree: B.S. in Physics
+    dates: 2024 -- 202X
   - school: Autonomous University of Madrid
     location: Madrid, Spain
     degree: M.S. in Data Science
